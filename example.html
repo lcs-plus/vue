@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+</head>
+<body>
+
+<div id="app">
+
+<!--&lt;!&ndash;    <b v-once>{{ a }}</b>&ndash;&gt;  不更新-->
+    <p><b>{{ a }}</b></p>
+    <b v-html="a"></b>
+    <p>
+        <span v-bind:disabled="istrue">显示</span>
+    </p>
+
+    <p>
+        <span>{{ num +10 }}</span>
+    </p>
+
+    <p>
+        <a v-bind:[attbuid]="url">baidu</a>
+    </p>
+
+</div>
+
+</body>
+<script src="script/example.js"></script>
+</html>

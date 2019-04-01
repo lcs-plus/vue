@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+</head>
+<body>
+
+<div id="app" v-bind:title="message">
+
+    {{ message }}
+
+</div>
+
+
+<div id="app1" v-if="seen">
+    aaaaaaaaaaaa
+</div>
+
+<div id="app2">
+
+    <ol>
+        <li v-for="x in list">{{ x.name }}</li>
+    </ol>
+
+</div>
+
+<div id="app3">
+    {{ msg}}
+    <p><input v-model="msg"></p>
+    <p><button v-on:click="reverseMsg">点击</button></p>
+</div>
+
+
+</body>
+<script src="script/index.js"></script>
+</html>
