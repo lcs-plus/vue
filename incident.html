@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+
+<div id="app">
+
+    <p>
+        <a v-on:click.stop="doTh">aaa</a>
+    </p>
+    <p>
+        <a v-on:click.once="doTh">bbb</a>
+    </p>
+
+    <p>
+
+        <input v-on:keyup.enter="doTh">enter</input>
+
+    </p>
+
+
+<p>
+    <button v-on:click.stop="ss('hi',$event)">add 1</button>
+</p>
+    <p>
+        <span>{{ num }}</span>
+    </p>
+
+</div>
+
+</body>
+<script src="script/incident.js"></script>
+</html>

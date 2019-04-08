@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+
+<div id="app">
+
+<div v-if="isTrue===false">显示</div>
+<div v-else-if="isData">不显示1</div>
+    <div v-else>不显示2</div>
+
+</div>
+
+
+
+<div id="app1">
+    <h1 v-show="isOk">显示</h1>
+    <div v-if="loginType==='username'">
+        <span>userName</span>
+        <input id="username" type="text" placeholder="userName" key="username">
+    </div>
+    <div v-if="loginType==='email'">
+        <span name="email">email</span>
+        <input id="email" type="email" placeholder="email" key="email">
+    </div>
+    <button v-on:click="trigger">切换</button>
+</div>
+
+
+<div id="app3">
+    <ul>
+<!--        <li v-for="item in list" v-if="item.id%2===0">{{ item.name}}</li>-->
+        <li v-for="(item,index) of lister">{{ index }} ----  {{ item.name}}</li>
+    </ul>
+
+    <ul>
+        <li v-for="(item,key,index) in object">{{ index}} , {{ key }} : {{ item }}</li>
+    </ul>
+
+    <ol>
+        <li v-for="item in 10">{{ item }}</li>
+    </ol>
+
+</div>
+
+</body>
+<script src="script/judge.js"></script>
+</html>

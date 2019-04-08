@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+
+<div id="app">
+
+    <p>
+        <input v-model="message">
+        Message is : {{ message }}
+
+    </p>
+
+
+    <p>
+
+        <textarea v-model="textarea_message"></textarea>
+        Message is : {{ textarea_message }}
+    </p>
+
+    <p>
+
+    <div>
+        <input type="checkbox" value="a" v-model="checked">
+    </div>
+    <div>
+        <input type="checkbox" value="b" v-model="checked">
+
+    </div>
+    <div>
+        <input type="checkbox" value="c" v-model="checked">
+
+    </div>
+    <span>{{ checked }}</span>
+    </p>
+
+    <p>
+        <input type="radio" value="0" id="one" v-model="radio">
+        <input type="radio" value="1" id="two" v-model="radio">
+        <span> {{ radio }}</span>
+
+    </p>
+
+
+    <p>
+
+        <select name="" id="" v-model="select" multiple >
+            <option v-for="item in list" v-bind:value="item">{{ item }}</option>
+        </select>
+
+        <span>select: {{ select }}</span>
+
+    </p>
+
+
+    <p>
+
+        <input type="checkbox" v-model.lazy="check" true-value="yes" false-value="no">
+        <span>{{ check }}</span>
+
+
+    </p>
+
+
+    <p>
+        <input v-model.trim="msg" type="text">
+        <br>
+        <span>{{ msg }}</span>
+    </p>
+
+
+</div>
+
+
+
+
+
+
+</body>
+<script src="script/form.js"></script>
+</html>
